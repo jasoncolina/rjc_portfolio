@@ -37,7 +37,7 @@ button:hover{
 }
 
 .parallax{
-    background-image: url(assets/images/pattern3.jpg);
+    background-image: url(../images/pattern3.jpg);
     background-size:cover;
     background-repeat:no-repeat;
     background-position: center;
