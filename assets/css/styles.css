@@ -211,10 +211,15 @@ footer h1{
 
     .nav-item{
         display:inline-block;
-        border-radius: 5px;
-        width:100px;
+        width:75px;
         text-align:center;
         color:white;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-item:hover{
+        background-color: white;
+        color:black;
     }
 
     .desc{
