@@ -15,6 +15,7 @@ body{
     font-size:16px;
     line-height: 1.5;
     background-color:cyan;
+    height:100%;
 }
 
 .container{
