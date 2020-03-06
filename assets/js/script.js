@@ -1,8 +1,10 @@
 var toggle = document.querySelector('.toggle');
-var nav = document.querySelector('.nav-collapse');
+var navItems = document.querySelector('.nav-collapse');
+var nav = document.querySelector('nav');
+var prevScrollpos = window.pageYOffset;
 
 toggle.addEventListener('click', function(){
-    if(nav.classList.contains('nav-show-transition')){
+    if(navItems.classList.contains('nav-show-transition')){
         fade();
         setTimeout(show,300);
     }else{
@@ -13,9 +15,19 @@ toggle.addEventListener('click', function(){
 
 
 function show(){
-    nav.classList.toggle('nav-show');
+    navItems.classList.toggle('nav-show');
 }
 
 function fade(){
-    nav.classList.toggle('nav-show-transition');
+    navItems.classList.toggle('nav-show-transition');
+}
+
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        nav.style.top = "0";
+    } else {
+        nav.style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
 }
