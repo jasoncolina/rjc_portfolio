@@ -88,7 +88,7 @@ a.brand:visited{
 
 .nav-collapse{
     color:black;
-    display:block;
+    display:none;
     position:absolute;
     top:50px;
     left:0;
@@ -96,12 +96,15 @@ a.brand:visited{
     margin:0;
     width:100%;
     padding:1em;
+    opacity:0;
+    transition: opacity 0.3s;
 }
 
-li.nav-item{
+.nav-item{
     padding:0.5em;
     list-style: none;
     transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
 }
 
 .nav-item:hover{
@@ -114,10 +117,18 @@ li.nav-item{
     margin: 0.5em 0 0.5em 0.5em;
     background-color:black;
     color:white;
-    border: 1px solid white;
+    border: 3px solid black;
     border-radius: 5px;
     font-size:1em;
     transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-show{
+    display:block;
+}
+
+.nav-show-transition{
+    opacity:1;
 }
 
 button:hover{
@@ -126,9 +137,8 @@ button:hover{
     cursor: pointer;
 }
 
-
-.nav-collapse button{
-    
+.toggle{
+    cursor: pointer;
 }
 
 
@@ -229,10 +239,12 @@ footer h1{
         position:static;
         background-color:transparent;
         padding:0;
+        opacity:1;
     }
     
     .nav-collapse button{
         margin-left: auto;
+        border-color: white;
     }
 
     .nav-item{
